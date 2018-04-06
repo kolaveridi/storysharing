@@ -1,0 +1,16 @@
+{
+  "name": "story-books",
+  "version": "1.0.0",
+  "description": "Sharing stories publicly or privately",
+  "main": "appp.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.0.13",
+    "nodemon": "^1.17.3"
+  }
+}
