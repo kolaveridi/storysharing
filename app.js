@@ -8,7 +8,15 @@ require('./config/passport')(passport);
 const port=process.env.PORT || 3000;
 //load routes
 const auth=require('./routes/auth');
-
+//map global promises
+mongoose.Promise=global.Promise;
+//mongoose conncet
+const keys=require('./config/keys');
+mongoose.connect(keys.mongoURI,{
+  
+})
+.then(()=>console.log('MongoDb connected'))
+.catch(err=>console.log(err));
 
 app.get('/',(req,res)=>{
   res.send('It works');
